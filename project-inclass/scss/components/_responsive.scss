@@ -1,0 +1,23 @@
+// responsive
+@use "../abstracts/mixin" as *;
+
+@include media-sm {
+  .header {
+    display: block;
+    text-align: right;
+    &__links,
+    &__logo {
+      display: none;
+    }
+    i {
+      display: inline-block;
+      margin-left: auto;
+      padding-right: 1rem;
+    }
+    .show {
+      @include flex(center, center); //? menu gornur hale geldi
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}

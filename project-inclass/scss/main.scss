@@ -1,0 +1,36 @@
+// main
+// @import "./abstracts/color";
+// @import "./abstracts/variables";
+
+// @use "./abstracts/color" as c;
+// @use "./abstracts/variables" as *;
+
+//? BASE-ABSTRACTS
+@use "./abstracts/variables" as v;
+@use "./base/reset";
+
+//? COMPONENTS
+@use "./components/navbar";
+@use "./components/responsive";
+
+//?SECTIONS
+@use "./sections/home";
+
+//? FONTS AND 3RD PARTY
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Mulish&family=Playfair+Display&family=Rampart+One&display=swap");
+
+body {
+  //   background-color: variables.$mainColor;
+  background-color: v.$mainColor;
+}
+
+.container {
+  max-width: v.$maxWidth;
+  margin: auto;
+  padding: 1rem;
+}
+button,
+i {
+  cursor: pointer;
+}
